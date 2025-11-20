@@ -29,6 +29,8 @@ dot(vec1, vec2) / (norm(vec1) * norm(vec2))
 
 sim(u, v) = dot(u, v) / norm(u) / norm(v)
 
+sim(v) = u -> sim(u, v)
+
 sim(vec1, vec2)
 
 vectors = [randvector(n) for i in 1:100]
@@ -174,15 +176,15 @@ sim(bread, sandwich_flipped)
 
 # 1. bundling
 
-bundle(hvs...) = sign.(sum(hvs))
+bundle(hvs) = sign.(sum(hvs))
 
-uv_bundle = bundle(u, v)
+uv_bundle = bundle((u, v))
 
 sim(uv_bundle, u)
 
 sim(uv_bundle, v)
 
-fruits = bundle(apple, pear, tomato)
+fruits = bundle((apple, pear, tomato))
 
 sim(fruits, apple)
 
@@ -190,15 +192,15 @@ sim(fruits, apple)
 
 # 2. binding
 
-bind(hvs) = reduce(.*, hvs)
+bind(u, v) = u .* v
 
-uv_bound = bind((u, v))
+uv_bound = bind(u, v)
 
 sim(uv_bound, u)
 
 sim(uv_bound, v)
 
-u_unbound = bind((uv_bound, v))
+u_unbound = bind(uv_bound, v)
 
 u_unbound == u
 
