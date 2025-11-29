@@ -14,3 +14,7 @@ This is an accessible tutorial about hyperdimensional computing (HDC), with an e
 Course material:
 - [slides](https://speakerdeck.com/michielstock/hdc-tutorial)
 - [Pluto notebook](https://kermit-ugent.github.io/HDC_tutorial/)
+
+Much of this tutorial is based on our review paper:
+
+> Stock, M., Criekinge, W.V., Boeckaerts, D., Taelman, S., Haeverbeke, M.V., Dewulf, P., Baets, B.D., 2024. Hyperdimensional computing: A fast, robust, and interpretable paradigm for biological data. PLOS Computational Biology 20, e1012426. https://doi.org/10.1371/journal.pcbi.1012426 ([link](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1012426))
