@@ -62,7 +62,7 @@ hv_texts = Dict(l => bundle(hv.(kmers(s, k))) for (l, s) in wiki_texts)
 
 text_similarities = [(sim(v1, v2), l1, l2) for (l1, v1) in hv_texts for (l2, v2) in hv_texts if l1 > l2]
 
-sort!(text_similarities) |> reverse!
+text_similarities |> sort! |> reverse!
 
 # add heatmap
 
