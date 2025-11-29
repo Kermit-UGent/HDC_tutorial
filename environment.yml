@@ -1,0 +1,13 @@
+name: hdc_tutorial
+channels:
+  - conda-forge
+  - pytorch
+  - defaults
+dependencies:
+  - python=3.10
+  - pytorch
+  - pandas
+  - numpy
+  - pip
+  - pip:
+    - fair-esm  # ESM protein language models (optional, if you need to generate embeddings)
